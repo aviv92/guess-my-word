@@ -1,0 +1,42 @@
+.LetterKey {
+	height: 60px;
+	width: 65px;
+	font-size: 3rem;
+	font-family: inherit;
+	border-radius: 12px;
+	background-color: #4da8da;
+	color: white;
+	margin: 4px;
+	cursor: pointer;
+	box-shadow: 2px 4px #454545;
+	border: #444;
+	transition: background-color 0.1s, transform 0.3s ease;
+}
+
+.LetterKey:hover {
+	background-color: #007cc7;
+	cursor: pointer;
+	transform: rotate(10deg);
+}
+
+.LetterKey:disabled {
+	cursor: not-allowed;
+	box-shadow: none;
+	transform: none;
+}
+
+@media (max-width: 1440px) {
+	.LetterKey {
+		height: 45px;
+		width: 45px;
+		font-size: 1.5rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.LetterKey {
+		height: 20px;
+		width: 20px;
+		font-size: 1rem;
+	}
+}

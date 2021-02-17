@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { wordsToGuess } from "../constants/constants";
 import classes from "./Game.module.css";
 import Form from "../Form/Form";
+import LetterKeys from "./LetterKeys/LetterKeys";
 
 const Game = (props) => {
 	const getWord = () => {
@@ -63,28 +64,6 @@ const Game = (props) => {
 		setCurrentGuessState(tmpStr);
 	};
 
-	const letters = "abcdefghijklmnopqrstuvwxyz".split("").map((letterButton) => {
-		let isUsed = false;
-		if (usedLettersState.length !== 0) {
-			let idx = usedLettersState.indexOf(letterButton);
-			if (idx !== -1) {
-				isUsed = true;
-			} else {
-				isUsed = false;
-			}
-		}
-		return (
-			<button
-				className={classes.ButtonLetter}
-				onClick={() => handleLetterClick(letterButton)}
-				key={letterButton}
-				disabled={isUsed}
-			>
-				{letterButton}
-			</button>
-		);
-	});
-
 	const handleNextWord = () => {
 		const nextWord = getWord();
 		setWordToGuess(nextWord);
@@ -102,7 +81,6 @@ const Game = (props) => {
 				/>
 			) : (
 				<div className={classes.Container}>
-					{/* <div className={classes.ButtonLetterContainer}>{ letters}</div> */}
 					<div className={classes.GameStatus}>
 						<div>
 							Score: {scoreState} Left Guesses: {guessesLeftState}
@@ -115,7 +93,10 @@ const Game = (props) => {
 							Well Done! Next word =>{" "}
 						</button>
 					) : (
-						<div className={classes.ButtonLetterContainer}>{letters}</div>
+						<LetterKeys
+							handleLetterClick={handleLetterClick}
+							usedLetters={usedLettersState}
+						/>
 					)}
 				</div>
 			)}

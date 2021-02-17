@@ -17,40 +17,6 @@
 	color: white;
 }
 
-.ButtonLetter {
-	height: 60px;
-	width: 65px;
-	font-size: 3rem;
-	font-family: inherit;
-	border-radius: 12px;
-	background-color: #4da8da;
-	color: white;
-	margin: 4px;
-	cursor: pointer;
-	box-shadow: 2px 4px #454545;
-	border: #444;
-	transition: background-color 0.3s ease, transform 0.3s;
-}
-
-.ButtonLetterContainer {
-	position: fixed;
-	top: 80%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.ButtonLetter:hover {
-	background-color: #007cc7;
-	cursor: pointer;
-	transform: rotate(10deg);
-}
-
-.ButtonLetter:disabled {
-	cursor: not-allowed;
-	box-shadow: none;
-	transform: none;
-}
-
 .NextWordButton {
 	height: 70px;
 	width: 300px;
@@ -85,22 +51,8 @@
 	box-shadow: 2px 4px #454545;
 }
 
-/* Tablets and Laptops */
-@media (max-width: 1440px) {
-	.ButtonLetter {
-		height: 45px;
-		width: 45px;
-		font-size: 1.5rem;
-	}
-}
-
 /* Smartphones */
 @media (max-width: 768px) {
-	.ButtonLetter {
-		height: 20px;
-		width: 20px;
-		font-size: 1rem;
-	}
 	.WordLetter {
 		font-size: 2rem;
 	}
