@@ -1,6 +1,9 @@
 .App {
-	background-color: #64b5f6;
-	width: 100%;
+	background-image: url(./assets/images/Background.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
 	height: 100vh;
 	font-family: inherit;
 }

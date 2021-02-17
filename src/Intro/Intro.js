@@ -14,26 +14,24 @@ const Intro = (props) => {
 		setStartGame(false);
 	};
 
-	return (
+	const intro = (
 		<div>
-			{startGame ? (
-				<Game handleEndGame={handleEndGame} />
-			) : (
-				<div>
-					<div className={classes.Title}>Guess The Word</div>
-					<button className={classes.ButtonNewGame} onClick={handleStartGame}>
-						New Game
-					</button>
-					<div
-						className={
-							props.highScore === 0 ? classes.NoBestScore : classes.BestScore
-						}
-					>
-						Highest Score: {props.highScore}
-					</div>
-				</div>
-			)}
+			<div className={classes.Title}>Guess The Word</div>
+			<button className={classes.ButtonNewGame} onClick={handleStartGame}>
+				New Game
+			</button>
+			<div
+				className={
+					props.highScore === 0 ? classes.NoBestScore : classes.BestScore
+				}
+			>
+				Highest Score: {props.highScore}
+			</div>
 		</div>
+	);
+
+	return (
+		<div>{startGame ? <Game handleEndGame={handleEndGame} /> : intro}</div>
 	);
 };
 
