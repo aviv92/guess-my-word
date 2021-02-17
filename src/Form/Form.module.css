@@ -1,0 +1,123 @@
+.Form {
+	display: flex;
+	flex-direction: column;
+}
+
+.GameOver {
+	position: absolute;
+	left: 50%;
+	top: 30%;
+	transform: translate(-50%, -50%);
+	font-family: inherit;
+	font-size: 5rem;
+	color: #454545;
+	animation: GameOverColors 5s infinite ease-in-out;
+}
+
+.Score {
+	position: absolute;
+	left: 50%;
+	top: 38%;
+	transform: translate(-50%, -50%);
+	font-family: inherit;
+	font-size: 2rem;
+	color: #454545;
+}
+
+.MissedGuess {
+	position: absolute;
+	left: 50%;
+	top: 43%;
+	transform: translate(-50%, -50%);
+	font-family: inherit;
+	font-size: 2rem;
+	color: #454545;
+}
+
+.Input1 {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font-family: inherit;
+	background-color: inherit;
+	color: #454545;
+	font-size: 1.5rem;
+	border: #007cc7 1px solid;
+}
+
+.Input2 {
+	position: absolute;
+	left: 50%;
+	top: 55%;
+	transform: translate(-50%, -50%);
+	font-family: inherit;
+	background-color: inherit;
+	color: #454545;
+	font-size: 1.5rem;
+	border: #007cc7 1px solid;
+}
+
+.Submit {
+	height: 70px;
+	width: 200px;
+	border-radius: 12px;
+	background-color: #4da8da;
+	color: white;
+	margin: 0;
+	position: absolute;
+	top: 63%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: inherit;
+	font-size: 1.5rem;
+	transition: background-color 0.5s, width 0.5s;
+	border: #ddd;
+}
+.Submit:hover {
+	background-color: #007cc7;
+	cursor: pointer;
+	width: 300px;
+}
+
+@keyframes GameOverColors {
+	from {
+		color: #454545;
+	}
+	50% {
+		color: #f44336;
+	}
+	to {
+		color: #454545;
+	}
+}
+
+/* Tablets and Laptops */
+@media (max-width: 1440px) {
+	.GameOver {
+		font-size: 2.5rem;
+	}
+	.Submit {
+		top: 70%;
+	}
+	.Input2 {
+		top: 57%;
+	}
+}
+
+/* Smartphones */
+@media (max-width: 767px) {
+	.GameOver {
+		font-size: 1.5rem;
+	}
+	.Score {
+		font-size: 1.2rem;
+	}
+	.Submit {
+		width: 150px;
+		font-size: 1.2rem;
+	}
+	.Input1 .Input2 {
+		font-size: 1rem;
+	}
+}

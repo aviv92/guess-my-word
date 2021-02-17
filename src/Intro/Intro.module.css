@@ -1,0 +1,100 @@
+.ButtonNewGame {
+	height: 70px;
+	width: 200px;
+	border-radius: 12px;
+	background-color: #4da8da;
+	color: white;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: inherit;
+	font-size: 1.5rem;
+	transition: background-color 0.5s, width 0.5s;
+	border: #ddd;
+}
+
+.ButtonNewGame:hover {
+	background-color: #007cc7;
+	cursor: pointer;
+	width: 300px;
+}
+
+.Title {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: inherit;
+	font-size: 4rem;
+	color: white;
+	animation: moving 5s infinite ease;
+}
+
+.NoBestScore {
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: inherit;
+	font-size: 2rem;
+	color: #454545;
+}
+
+.BestScore {
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: inherit;
+	font-size: 2rem;
+	color: #fff;
+	animation: bestScore 1s ease-in-out infinite alternate;
+}
+
+@keyframes moving {
+	from {
+		left: 40%;
+		color: white;
+	}
+	50% {
+		left: 50%;
+		color: #454545;
+	}
+	to {
+		left: 60%;
+		color: white;
+	}
+}
+
+@keyframes bestScore {
+	from {
+		text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e9897e,
+			0 0 40px #e9897e, 0 0 50px #e9897e, 0 0 60px #e9897e, 0 0 70px #e9897e;
+	}
+
+	to {
+		text-shadow: 0 0 20px #fff, 0 0 30px #e15f51, 0 0 40px #e15f51,
+			0 0 50px #e15f51, 0 0 60px #e15f51, 0 0 70px #e15f51, 0 0 80px #e15f51;
+	}
+} /* Tablets and Laptops */
+@media (max-width: 1440px) {
+	.Title {
+		font-size: 2.5rem;
+	}
+}
+
+/* Smartphones */
+@media (max-width: 767px) {
+	.Title {
+		font-size: 1rem;
+	}
+	.BestScore {
+		font-size: 1rem;
+	}
+	.ButtonNewGame {
+		width: 150px;
+		font-size: 1rem;
+	}
+}
